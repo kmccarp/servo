@@ -97,7 +97,7 @@ public class CloudWatchMetricObserver extends BaseMetricObserver {
   }
 
   private int batchSize;
-  private boolean truncateEnabled = false;
+  private boolean truncateEnabled;
 
   private final AmazonCloudWatch cloudWatch;
   private final String cloudWatchNamespace;

@@ -209,7 +209,7 @@ public final class JmxMetricPoller implements MetricPoller {
       Object obj = attr.getValue();
       if (obj instanceof TabularData) {
         ((TabularData) obj).values().stream()
-            .filter(key -> key instanceof CompositeData)
+            .filter(CompositeData.class::isInstance)
             .forEach(key -> addTabularMetrics(filter, metrics, tags, attrName,
                 (CompositeData) key));
       } else if (obj instanceof CompositeData) {

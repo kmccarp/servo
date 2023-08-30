@@ -73,7 +73,7 @@ public class BasicTimer extends AbstractMonitor<Long>
     totalOfSquares = new DoubleCounter(unitConfig.withAdditionalTag(STAT_TOTAL_SQ), clock);
     max = new DoubleMaxGauge(unitConfig.withAdditionalTag(STAT_MAX), clock);
 
-    monitors = UnmodifiableList.<Monitor<?>>of(totalTime, count, totalOfSquares, max);
+    monitors = UnmodifiableList.of(totalTime, count, totalOfSquares, max);
   }
 
   /**
