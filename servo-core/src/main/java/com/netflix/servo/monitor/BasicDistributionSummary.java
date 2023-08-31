@@ -54,7 +54,7 @@ public class BasicDistributionSummary
     max = new MaxGauge(config.withAdditionalTag(STAT_MAX));
     min = new MinGauge(config.withAdditionalTag(STAT_MIN));
 
-    monitors = UnmodifiableList.<Monitor<?>>of(totalAmount, count, max, min);
+    monitors = UnmodifiableList.of(totalAmount, count, max, min);
   }
 
   /**

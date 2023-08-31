@@ -101,7 +101,7 @@ public final class ThreadCpuStats {
    */
   public static final String THREADS = "threads";
 
-  private volatile boolean running = false;
+  private volatile boolean running;
 
   private final CpuUsage jvmCpuUsage = new CpuUsage(-1, "jvm");
 
